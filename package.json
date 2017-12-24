@@ -1,0 +1,22 @@
+{
+  "name": "nhancao",
+  "version": "1.0.0",
+  "description": "beesight assistant",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beesightsoft/beesight.git"
+  },
+  "keywords": [
+    "beesight"
+  ],
+  "author": "beesightsoft",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beesightsoft/beesight/issues"
+  },
+  "homepage": "https://github.com/beesightsoft/beesight#readme"
+}
