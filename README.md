@@ -6,9 +6,6 @@ beesight <feature> [option]
 
 ```
 rct - Generate react native project
-  
-
-
 ```
 
 ### Dependencies
