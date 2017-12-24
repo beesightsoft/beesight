@@ -31,6 +31,7 @@ var GitHubApi   = require('github');
 var _           = require('lodash');
 var git         = require('simple-git')();
 var touch       = require('touch');
+var path        = require('path');
 var fs          = require('fs');
 var files       = require('./lib/files');
 
@@ -47,7 +48,7 @@ var argv = minimist(process.argv.slice(2));
 // { _: [ 'my-repo', 'just a test repository' ] }
 
 var feature = argv._[0];
-var fPath = './f/' + feature + '.js';
+var fPath = files.getDirectoryBase() + '/f/' + feature + '.js';
 if(files.fileExists(fPath)){
 	try {
 		var f = require(fPath);

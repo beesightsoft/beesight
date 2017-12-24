@@ -32,7 +32,7 @@ module.exports = {
     const remote = 'https://github.com/beesightsoft/bss-rct-template.git';
     git
     .silent(true)
-    .clone(remote)
+    .clone(remote, files.getCurrentDirectoryBase())
     .then(() => {
       status.stop();
       print.ok('Finish');
