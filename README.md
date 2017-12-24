@@ -1,6 +1,6 @@
 ## beesight
 
-beesight <feature> [option]
+beesight [feature] [option]
 
 ### Features
 
