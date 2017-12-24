@@ -20,25 +20,34 @@ var _           = require('lodash');
 var git         = require('simple-git/promise')();
 var touch       = require('touch');
 var fs          = require('fs');
+var shell       = require('shelljs');
 var files       = require('../lib/files');
 
 const log = console.log;
 
 module.exports = {
   main : function() {
-    var status = new Spinner('Cloning, please wait...');
-    status.start();
+    var spinner = new Spinner("Cloning, please wait...");
+    spinner.start();
 
     const remote = 'https://github.com/beesightsoft/bss-rct-template.git';
+    const repoName = "bss-rct-template";
     git
     .silent(true)
-    .clone(remote, files.getCurrentDirectoryBase())
+    .clone(remote, repoName)
     .then(() => {
-      status.stop();
-      print.ok('Finish');
+      spinner.stop();
+      print.ok('Finish clone.');
+      
+      print.log("Install dependencies...");
+      shell.cd(repoName);
+      if (shell.exec('npm i').code !== 0) {
+        shell.exit(1);
+      }
+      print.ok('Finish install.');
     })
     .catch((err) => {
-      status.stop();
+      spinner.stop();
       print.error(err);
     })
   }

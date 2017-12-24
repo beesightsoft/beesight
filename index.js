@@ -15,7 +15,7 @@ github – Node wrapper for the GitHub API https://www.npmjs.com/package/github
 lodash – JavaScript utility library https://www.npmjs.com/package/lodash
 simple-git – runs Git commands in a Node.js application https://www.npmjs.com/package/simple-git
 touch – implementation of the *Nix touch command https://www.npmjs.com/package/touch
-
+shelljs - https://www.npmjs.com/package/shelljs
 */
 
 var chalk       = require('chalk');
@@ -34,6 +34,7 @@ var touch       = require('touch');
 var path        = require('path');
 var fs          = require('fs');
 var files       = require('./lib/files');
+var shell       = require('shelljs');
 
 const log = console.log;
 
@@ -45,10 +46,11 @@ log(
 	);
 
 var argv = minimist(process.argv.slice(2));
-// { _: [ 'my-repo', 'just a test repository' ] }
+// { _: [ 'f_name', 'option' ] }
 
 var feature = argv._[0];
 var fPath = files.getDirectoryBase() + '/f/' + feature + '.js';
+
 if(files.fileExists(fPath)){
 	try {
 		var f = require(fPath);
