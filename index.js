@@ -16,25 +16,22 @@ lodash – JavaScript utility library https://www.npmjs.com/package/lodash
 simple-git – runs Git commands in a Node.js application https://www.npmjs.com/package/simple-git
 touch – implementation of the *Nix touch command https://www.npmjs.com/package/touch
 shelljs - https://www.npmjs.com/package/shelljs
+
+print.ok('hello world')
+print.warn('hello world')
+print.error('hello world')
+print.trace('hello world')
+print.log('hello world')
+
 */
 
 var chalk       = require('chalk');
-var print       = require('chalk-printer')
+var print       = require('chalk-printer');
 var clear       = require('clear');
-var CLI         = require('clui');
 var figlet      = require('figlet');
-var inquirer    = require('inquirer');
 var minimist    = require('minimist');
-var Preferences = require('preferences');
-var Spinner     = CLI.Spinner;
-var GitHubApi   = require('github');
 var _           = require('lodash');
-var git         = require('simple-git')();
-var touch       = require('touch');
-var path        = require('path');
-var fs          = require('fs');
 var files       = require('./lib/files');
-var shell       = require('shelljs');
 
 const log = console.log;
 
@@ -53,9 +50,7 @@ var fPath = files.getDirectoryBase() + '/f/' + feature + '.js';
 
 if(files.fileExists(fPath)){
 	try {
-		var f = require(fPath);
-		print.ok('Running feature: %s', feature);
-		f.main();
+		require(fPath).main();
 	} catch (err) {
 		print.error(err);
 	}
