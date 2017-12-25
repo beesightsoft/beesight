@@ -1,6 +1,6 @@
 {
   "name": "beesight",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "beesight assistant",
   "main": "index.js",
   "scripts": {
