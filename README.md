@@ -1,6 +1,13 @@
-## beesight
+# beesight
+```
+Usage: beesight <feature>
+where <feature> is on of:
+	rct, v, h
 
-beesight [feature] [option]
+	beesight rct	generate react native project template.
+	beesight h	help.
+	beesight v	version.
+```
 
 ### Features
 
@@ -10,11 +17,6 @@ rct - Generate react native project
 
 ### Installation
 npm install -g beesight
-
-### Ex
-
-beesight rct
-
 
 ### How it's work?
 
