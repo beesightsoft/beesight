@@ -16,7 +16,15 @@ rct - Generate react native project
 ```
 
 ### Installation
-npm install -g beesight
+`npm install -g beesight`
+
+### Requirements
+```
+node: v7.10.1
+npm: 4.2.0
+react-native-cli: 2.0.1
+git: 2.14.3 (Apple Git-98)
+```
 
 ### How it's work?
 
