@@ -1,5 +1,5 @@
-var print       = require('chalk-printer');
-var pjson       = require('../package.json');
+const print       = require('chalk-printer');
+const pjson       = require('../package.json');
 
 module.exports = {
   main : function() {
