@@ -22,7 +22,7 @@ const defaultConfig = {
     appId: "com.beesightsoft.rct"
 }
 
-const currentDir = files.getDirectoryBase();
+const currentDir = files.getCurrentDirectoryBase();
 
 var getConfig = (defaultConfig, callback) => {
 
