@@ -260,14 +260,17 @@ var run = () => {
         change |= changeAppName(currentDir + '/' + data.folderName, data.appId, data.appName, defaultConfig.appName);
 
         if(change){
-            shell.exec("git add -A .");
-            shell.exec("git commit -m 'update config'" );
+            shell.exec('git add -A .');
+            shell.exec('git commit -m "update config"');
         }
 
         print.ok('Finish install.');
         print.log('===> Next step'
             + '\n\t- cd to \'%s\' folder'
-            + '\n\t- Install dependencies by command \'npm i\'', data.folderName);
+            + '\n\t- Install dependencies by command \'npm i\''
+            + '\n\t- Build and run android \'react-native run-android\''
+            + '\n\t- Build and run ios \'cd ios; pod install; cd ../; react-native run-ios\''
+            , data.folderName);
 
     });
 }
