@@ -275,7 +275,7 @@ var run = () => {
 module.exports = {
     main: function () {
         try {
-           // run();
+           run();
         } catch (err) {
             print.error(err);
         }
