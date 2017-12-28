@@ -20,10 +20,12 @@
   },
   "homepage": "https://github.com/beesightsoft/beesight#readme",
   "dependencies": {
+    "bluebird": "3.3.5",
     "chalk": "^2.3.0",
     "chalk-printer": "^1.1.2",
     "clear": "0.0.1",
     "clui": "^0.3.6",
+    "deep-assign": "2.0.0",
     "figlet": "^1.2.0",
     "inquirer": "^4.0.1",
     "lodash": "^4.17.4",

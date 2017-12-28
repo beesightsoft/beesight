@@ -2,17 +2,19 @@
 ```
 Usage: beesight <feature>
 where <feature> is on of:
-	rct, v, h
+	rct, rct_reset, rct_appname, v, h
 
-	beesight rct	generate react native project template.
-	beesight h	help.
-	beesight v	version.
 ```
 
 ### Features
 
 ```
-rct - Generate react native project
+h   Help.
+v   Version.
+rct Generate react-native project.
+rct_reset   Reset cache react-native project.
+rct_appname Change app name react-native project.
+rct_appid   Change app id react-native project
 ```
 
 ### Installation

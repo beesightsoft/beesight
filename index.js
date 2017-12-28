@@ -14,6 +14,7 @@ lodash – JavaScript utility library https://www.npmjs.com/package/lodash
 simple-git – runs Git commands in a Node.js application https://www.npmjs.com/package/simple-git
 shelljs - https://www.npmjs.com/package/shelljs
 replace - https://www.npmjs.com/package/replace
+gradlejs - https://github.com/ninetwozero/gradle-to-js
 
 print.ok('hello world')
 print.warn('hello world')
