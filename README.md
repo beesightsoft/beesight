@@ -1,6 +1,6 @@
 # beesight
 
-![npm](https://img.shields.io/npm/v/beesight.svg) ![license](https://img.shields.io/npm/l/beesight.svg) ![github-issues](https://img.shields.io/github/issues/revolunet/beesight.svg)  ![Circle CI build status](https://circleci.com/gh/revolunet/beesight.svg?style=svg)
+![npm](https://img.shields.io/npm/v/beesight.svg) ![license](https://img.shields.io/npm/l/beesight.svg) ![github-issues](https://img.shields.io/github/issues/beesightsoft/beesight.svg)
 
 Awesome cli generate anything
 
