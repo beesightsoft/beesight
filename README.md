@@ -4,8 +4,7 @@
 
 Awesome cli generate anything
 
-![nodei.co](https://nodei.co/npm/beesight.png?downloads=true&downloadRank=true&stars=true)
-
+[![nodei.co](https://nodei.co/npm/beesight.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/beesight)
 
 ```
 Usage: beesight <feature>
