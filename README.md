@@ -1,4 +1,12 @@
 # beesight
+
+![npm](https://img.shields.io/npm/v/beesight.svg) ![license](https://img.shields.io/npm/l/beesight.svg) ![github-issues](https://img.shields.io/github/issues/revolunet/beesight.svg)  ![Circle CI build status](https://circleci.com/gh/revolunet/beesight.svg?style=svg)
+
+Awesome cli generate anything
+
+![nodei.co](https://nodei.co/npm/beesight.png?downloads=true&downloadRank=true&stars=true)
+
+
 ```
 Usage: beesight <feature>
 where <feature> is on of:
