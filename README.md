@@ -9,7 +9,7 @@ Awesome cli generate anything
 ```
 Usage: beesight <feature>
 where <feature> is on of:
-	rct, rct_reset, rct_appname, rct_appid, v, h
+	rct, rct_reset, rct_appname, rct_appid, v, h avd
 
 ```
 
@@ -18,6 +18,7 @@ where <feature> is on of:
 ```
 h   Help.
 v   Version.
+avd Start Android emulator.
 rct Generate react-native project.
 rct_reset   Reset cache react-native project.
 rct_appname Change app name react-native project.

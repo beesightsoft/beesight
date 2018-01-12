@@ -30,10 +30,11 @@ module.exports = {
         log(
             '\nUsage: beesight <feature>'
             + '\nwhere <feature> is on of:'
-            + '\n\trct, rct_reset, rct_appname, rct_appid, v, h'
+            + '\n\trct, rct_reset, rct_appname, rct_appid, v, h, avd'
             + '\n'
             + genFun("h", "Help.")
             + genFun("v", "Version.")
+            + genFun("avd", "Start Android emulator.")
             + genFun("rct", "Generate react native project template.")
             + genFun("rct_reset", "Reset cache react native project.")
             + genFun("rct_appname", "Rename react native project.")
