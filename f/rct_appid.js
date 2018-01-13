@@ -11,11 +11,12 @@ const path = require('path');
 const fs = require('fs');
 const shell = require('shelljs');
 const replace = require('replace');
+const files = require('../lib/files');
 
 const log = console.log;
 
 const defaultConfig = {
-    projectPath: "/Users/nhancao/Downloads/bss-rct-template",
+    projectPath: "",
     appName: "BeeSightSoftRCT",
     currentAppId: "com.beesightsoft.rct",
     newAppId: "com.app.test",
@@ -70,6 +71,8 @@ var getConfig = () => {
 }
 
 const run = () => {
+
+    defaultConfig.projectPath = files.getCurrentDirectory();
 
     getProjectPath()
         .then((data) => data.projectPath)
