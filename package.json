@@ -30,6 +30,7 @@
     "inquirer": "^4.0.1",
     "lodash": "^4.17.4",
     "minimist": "^1.2.0",
+    "opentype.js": "^0.7.3",
     "replace": "^0.3.0",
     "shelljs": "^0.7.8"
   },
