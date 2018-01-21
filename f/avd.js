@@ -9,7 +9,7 @@ var getEmulatorId = (emulatorIds) => {
         var id = emulatorIds[i];
         // if (id != null && id != undefined && id.length > 0) {
         choices.push({
-            value: emulatorIds[i],
+            value: id,
             checked: i == 0
         });
         // }
@@ -24,11 +24,18 @@ var getEmulatorId = (emulatorIds) => {
 }
 
 const startEmulator = (emId) => {
-    shell.exec("emulator @" + emId + " -timezone Asia/Ho_Chi_Minh", {async: true});
+    var options = "-timezone Asia/Ho_Chi_Minh -no-snapshot"
+
+    var argv = process.argv.slice(3);
+    if (argv.length > 0) {
+        options = argv.join(" ");
+    }
+    var command = "emulator @" + emId + " " + options;
+    shell.exec(command, {async: true});
     process.exit(0);
 }
 const run = () => {
-    print.ok("Start Android emulator");
+    print.ok("Start Android emulator. \nMore option detail at: https://developer.android.com/studio/run/emulator-commandline.html");
     var emulatorIds = shell.exec('emulator -list-avds', {silent: true}).stdout;
     if (emulatorIds != null && emulatorIds != undefined && emulatorIds.length > 0) {
         emulatorIds = emulatorIds.split(/\r?\n/).filter(Boolean);
