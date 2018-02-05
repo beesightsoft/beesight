@@ -30,7 +30,6 @@ module.exports = {
         log(
             '\nUsage: beesight <feature>'
             + '\nwhere <feature> is on of:'
-            + '\n\trct, rct_reset, rct_appname, rct_appid, v, h, avd, font'
             + '\n'
             + genFun("h", "Help.")
             + genFun("v", "Version.")
@@ -40,6 +39,7 @@ module.exports = {
             + genFun("rct_reset", "Reset cache react native project.")
             + genFun("rct_appname", "Rename react native project.")
             + genFun("rct_appid", "Change app id react-native project.")
+            + genFun("rct_release_fix", "Fix 'Duplicate file' error when build android release.")
 
         );
 

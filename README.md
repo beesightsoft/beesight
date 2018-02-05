@@ -7,10 +7,7 @@ Awesome cli generate anything
 [![nodei.co](https://nodei.co/npm/beesight.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/beesight)
 
 ```
-Usage: beesight <feature>
-where <feature> is on of:
-	rct, rct_reset, rct_appname, rct_appid, v, h, avd, font
-
+Usage: beesight h
 ```
 
 ### Features
@@ -24,6 +21,7 @@ rct Generate react-native project.
 rct_reset   Reset cache react-native project.
 rct_appname Change app name react-native project.
 rct_appid   Change app id react-native project.
+rct_release_fix	Fix 'Duplicate file' error when build android release.
 ```
 
 ### Installation
