@@ -1,5 +1,6 @@
 {
   "name": "beesight",
+  "private": false,
   "version": "1.2.1",
   "description": "beesight assistant",
   "main": "index.js",
