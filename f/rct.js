@@ -70,7 +70,6 @@ var getConfig = (defaultConfig, callback) => {
                 return value.replace(/\s/g, '');
             },
             validate: function (value) {
-                log(value);
                 if (value.length) {
                     return true;
                 } else {
