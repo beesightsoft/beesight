@@ -31,6 +31,7 @@ const startEmulator = (emId) => {
         options = argv.join(" ");
     }
     var command = "emulator -avd " + emId + " " + options;
+    print.log(command)
     shell.exec(command, {async: true});
     process.exit(0);
 }
