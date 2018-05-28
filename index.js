@@ -24,46 +24,35 @@ print.log('hello world')
 
 */
 
-const chalk = require('chalk');
-const print = require('chalk-printer');
-const clear = require('clear');
-const figlet = require('figlet');
-const minimist = require('minimist');
-const _ = require('lodash');
-const files = require('./lib/files');
-const shell = require('shelljs');
+const chalk = require('chalk')
+const print = require('chalk-printer')
+const clear = require('clear')
+const figlet = require('figlet')
+const minimist = require('minimist')
+const _ = require('lodash')
+const files = require('./lib/files')
+const shell = require('shelljs')
 
-const log = console.log;
+const log = console.log
 
-clear();
-log(
-    chalk.yellow(
-        figlet.textSync('beesight', {horizontalLayout: 'full'})
-    )
-);
+clear()
+log(chalk.yellow(figlet.textSync('beesight', { horizontalLayout: 'full' })))
 
-var argv = minimist(process.argv.slice(2));
+var argv = minimist(process.argv.slice(2))
 // { _: [ 'f_name', 'option' ] }
 
-var feature = argv._[0];
-var fPath = files.getDirectoryBase() + '/f/' + feature + '.js';
+var feature = argv._[0]
+var fPath = files.getDirectoryBase() + '/f/' + feature + '.js'
 
 if (files.fileExists(fPath)) {
-    try {
-        require(fPath).main();
-    } catch (err) {
-        print.error(err);
-    }
+  try {
+    require(fPath).main()
+  } catch (err) {
+    print.error(err)
+  }
 } else {
-    print.error('Feature is not found!!! Carefully, ok');
-    try {
-        require(files.getDirectoryBase() + '/f/h.js').main();
-    } catch (e) {
-    }
+  print.error('Feature is not found!!! Carefully, ok')
+  try {
+    require(files.getDirectoryBase() + '/f/h.js').main()
+  } catch (e) {}
 }
-
-
-
-
-
-
