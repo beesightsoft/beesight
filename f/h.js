@@ -26,18 +26,28 @@ var genFun = (funName, funDesc) => {
 module.exports = {
   main: function() {
     log(
-      '\nUsage: beesight <feature>' +
-        '\nwhere <feature> is on of:' +
-        '\n' +
-        genFun('h', 'Help.') +
-        genFun('v', 'Version.') +
-        genFun('avd', 'Start Android emulator.') +
-        genFun('font', 'Read font info.') +
-        genFun('rct', 'Generate react native project template.') +
-        genFun('rct_reset', 'Reset cache react native project.') +
-        genFun('rct_appname', 'Rename react native project.') +
-        genFun('rct_appid', 'Change app id react-native project.') +
-        genFun('rct_release_fix', "Fix 'Duplicate file' error when build android release.")
+      '\nUsage: beesight <command> [params]' +
+        '\nwhere <command> is on of:' +
+        // genFun('h', 'Help.') +
+        // genFun('v', 'Version.') +
+        // genFun('avd', 'Start Android emulator.') +
+        // genFun('font', 'Read font info.') +
+        // genFun('rct', 'Generate react native project template.') +
+        // genFun('rct_reset', 'Reset cache react native project.') +
+        // genFun('rct_appname', 'Rename react native project.') +
+        // genFun('rct_appid', 'Change app id react-native project.') +
+        // genFun('rct_release_fix', "Fix 'Duplicate file' error when build android release.")
+      '\n  Param for -g command: rct (react native), flutter, android'+
+      '\n  Param for -m command: rct (react native), flutter, android'+
+      '\n  - With react native:' +
+          '\n\t+ Reset cache of react native project.'+
+          '\n\t+ Rename of react native project.'+
+          '\n\t+ Change app id of react-native project.'+
+      '\n  Param for -u command:'+
+          '\n\t+ avd: run android emulator'+
+          '\n\t+ font: Show font information'+
+      '\n  Param for -h: Show cli instruction'+
+      '\n  Param for -v: Show cli version'
     )
   }
 }

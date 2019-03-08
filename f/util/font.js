@@ -3,7 +3,7 @@ const print = require('chalk-printer')
 const shell = require('shelljs')
 const fs = require('fs')
 const path = require('path')
-const files = require('../lib/files')
+const files = require('../../lib/files')
 const opentype = require('opentype.js')
 
 const log = console.log

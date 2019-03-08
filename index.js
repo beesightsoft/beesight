@@ -36,23 +36,39 @@ const shell = require('shelljs')
 const log = console.log
 
 clear()
-log(chalk.yellow(figlet.textSync('beesight', { horizontalLayout: 'full' })))
+log(chalk.yellow(figlet.textSync('beesight', {horizontalLayout: 'full'})))
+var program = require('commander');
+program
+    .usage('<command> [params]')
+    .option('-v, --versions', 'Version')
+    .option('-h, --helps', 'Help')
+    .option('-u, --util [params]', 'Run util function', /^(font|avd)$/i)
+    .option('-g, --generate [params]', 'Generate template', /^(rct|flutter|android)$/i)
+    .option('-m, --modify [params]', 'Modify/Update project', /^(rct|flutter|android)$/i)
+    .allowUnknownOption(true)
+    .parse(process.argv);
 
-var argv = minimist(process.argv.slice(2))
-// { _: [ 'f_name', 'option' ] }
 
-var feature = argv._[0]
-var fPath = files.getDirectoryBase() + '/f/' + feature + '.js'
+var feature;
+if (program.versions) feature = 'v';
+else if (program.util) feature = 'util/' + program.util;
+else if (program.generate) feature = 'generate/' + program.generate;
+else if (program.modify) feature = 'modify/' + program.modify + "/" + program.args[0];
 
-if (files.fileExists(fPath)) {
-  try {
-    require(fPath).main()
-  } catch (err) {
-    print.error(err)
-  }
-} else {
-  print.error('Feature is not found!!! Carefully, ok')
-  try {
-    require(files.getDirectoryBase() + '/f/h.js').main()
-  } catch (e) {}
+    var fPath = files.getDirectoryBase() + '/f/' + feature + '.js'
+
+    // console.log(fPath);
+
+    if (files.fileExists(fPath)) {
+        try {
+            require(fPath).main()
+        } catch (err) {
+            print.error(err)
+        }
+    } else {
+        print.error('Feature is not found!!! Carefully, ok')
+        try {
+            require(files.getDirectoryBase() + '/f/h.js').main()
+        } catch (e) {
+        }
 }

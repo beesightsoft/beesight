@@ -10,8 +10,8 @@ const path = require('path')
 const fs = require('fs')
 const shell = require('shelljs')
 const replace = require('replace')
-const files = require('../lib/files')
-const rct_util = require('../lib/rct_util')
+const files = require('../../lib/files')
+const rct_util = require('../../lib/rct_util')
 
 const log = console.log
 

@@ -1,4 +1,4 @@
-const rct_util = require('../lib/rct_util')
+const rct_util = require('../../../lib/rct_util')
 const chalk = require('chalk')
 const print = require('chalk-printer')
 const clear = require('clear')
@@ -11,7 +11,7 @@ const path = require('path')
 const fs = require('fs')
 const shell = require('shelljs')
 const replace = require('replace')
-const files = require('../lib/files')
+const files = require('../../../lib/files')
 
 const log = console.log
 
